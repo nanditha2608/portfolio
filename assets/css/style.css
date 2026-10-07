@@ -344,6 +344,56 @@ body {
 .back-to-top.show { opacity: 1; pointer-events: auto; transform: none; }
 .back-to-top:hover { transform: translateY(-4px); }
 
+/* ============ HERO PROFESSIONAL HEADLINE ============ */
+.hero-headline {
+  font-size: clamp(1.05rem, 2.6vw, 1.45rem);
+  font-weight: 600; color: var(--text);
+  margin: 0.7rem 0 1.1rem; line-height: 1.5;
+}
+.hero-headline .sep { color: var(--accent); margin: 0 0.35rem; font-weight: 400; }
+.hero-keywords {
+  display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;
+  margin-bottom: 2.1rem;
+}
+.hero-keywords span {
+  font-size: 0.78rem; font-weight: 700; color: var(--accent);
+  background: var(--accent-soft); border: 1px solid var(--accent);
+  padding: 0.32rem 0.9rem; border-radius: 20px; letter-spacing: 0.3px;
+}
+
+/* ============ EXPERIENCE FOCUS STRIP ============ */
+.focus-strip { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0 1.2rem; }
+.focus-strip span {
+  font-size: 0.78rem; font-weight: 600; color: var(--text);
+  background: var(--bg-alt); border: 1px solid var(--border);
+  padding: 0.35rem 0.85rem; border-radius: 20px;
+}
+
+/* ============ SECTION SUBTITLE ============ */
+.section-sub { text-align: center; color: var(--muted); margin: -1.6rem 0 2.6rem; font-size: 1rem; }
+
+/* ============ PROJECT ROLE LINE ============ */
+.project-role { color: var(--muted); font-size: 0.92rem; margin-bottom: 0.9rem; }
+.project-role strong { color: var(--text); }
+
+/* ============ SKILLS CATEGORIES ============ */
+.skills-cats {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.5rem; max-width: 1020px; margin: 0 auto;
+}
+.skills-cat {
+  background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+  padding: 1.7rem; transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+}
+.skills-cat:hover { transform: translateY(-5px); box-shadow: var(--shadow); border-color: var(--accent); }
+.skills-cat h3 { font-size: 1rem; color: var(--accent); margin-bottom: 1.1rem; letter-spacing: 0.3px; }
+.skills-cat .chips { display: flex; flex-wrap: wrap; gap: 0.55rem; }
+.skills-also { text-align: center; color: var(--muted); margin-top: 2rem; font-size: 0.92rem; }
+.skills-also strong { color: var(--text); }
+
+/* ============ FEATURED CERTIFICATIONS ============ */
+.cert-featured { border: 1.5px solid var(--accent); box-shadow: var(--shadow); }
+
 /* ============ REVEAL ANIMATION ============ */
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.visible { opacity: 1; transform: none; }
