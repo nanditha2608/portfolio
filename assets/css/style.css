@@ -173,21 +173,9 @@ body {
 .stat:hover { transform: translateY(-5px); }
 .stat-num { display: block; font-size: 2.2rem; font-weight: 800; color: var(--accent); }
 .stat-label { color: var(--muted); font-size: 0.9rem; }
-.stat-expandable { cursor: pointer; }
-.stat-hint { display: block; font-size: 0.72rem; color: var(--muted); opacity: 0.65; margin-top: 0.35rem; transition: opacity 0.25s; }
-.stat-expandable:hover .stat-hint { opacity: 1; }
-.stat-expandable.open .stat-hint { opacity: 0; }
-.stat-detail {
-  list-style: none; margin: 0; padding: 0; text-align: left;
-  max-height: 0; overflow: hidden;
-  transition: max-height 0.5s ease, margin-top 0.3s ease;
-}
-.stat-expandable.open .stat-detail { max-height: 320px; margin-top: 0.9rem; }
-.stat-detail li {
-  font-size: 0.85rem; color: var(--muted);
-  padding: 0.45rem 0; border-top: 1px solid var(--border);
-}
-.stat-detail li strong { color: var(--text); }
+.stat-link { text-decoration: none; color: inherit; display: block; }
+.stat-link:hover { border-color: var(--accent); }
+.stat-link:hover .stat-label { color: var(--accent); }
 
 /* ============ EXPERIENCE SHOWCASE ============ */
 .exp-showcase { position: relative; max-width: 880px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.6rem; }
@@ -305,7 +293,8 @@ body {
   transition: 0.25s; cursor: default;
 }
 .chip:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-3px); }
-.chip-hot { border-color: var(--accent); background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+.chip:active { border-color: var(--accent); background: var(--accent); color: #111; transform: translateY(-1px); }
+.chip-hot { font-weight: 600; }
 
 /* ============ CERTIFICATIONS ============ */
 .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
