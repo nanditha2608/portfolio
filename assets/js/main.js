@@ -25,31 +25,6 @@
     a.addEventListener("click", function () { navLinks.classList.remove("open"); });
   });
 
-  /* ---------- Typewriter effect in hero ---------- */
-  var phrases = [
-    "Entry-Level Civil Engineer",
-    "Construction Management Graduate",
-    "Project Coordinator",
-    "Estimator & Scheduler"
-  ];
-  var typedEl = document.getElementById("typed");
-  var pi = 0, ci = 0, deleting = false;
-  function typeLoop() {
-    var word = phrases[pi];
-    if (!deleting) {
-      ci++;
-      typedEl.textContent = word.slice(0, ci);
-      if (ci === word.length) { deleting = true; return void setTimeout(typeLoop, 1600); }
-      setTimeout(typeLoop, 70);
-    } else {
-      ci--;
-      typedEl.textContent = word.slice(0, ci);
-      if (ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; return void setTimeout(typeLoop, 350); }
-      setTimeout(typeLoop, 35);
-    }
-  }
-  typeLoop();
-
   /* ---------- Reveal-on-scroll ---------- */
   var revealEls = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {
@@ -115,19 +90,6 @@
         var show = f === "all" || c.getAttribute("data-category") === f;
         c.classList.toggle("hide", !show);
       });
-    });
-  });
-
-  /* ---------- Skill tabs ---------- */
-  var tabs = document.querySelectorAll("#skillTabs .skill-tab");
-  var panels = document.querySelectorAll(".skill-panel");
-  tabs.forEach(function (tab) {
-    tab.addEventListener("click", function () {
-      tabs.forEach(function (t) { t.classList.remove("active"); });
-      panels.forEach(function (p) { p.classList.remove("active"); });
-      tab.classList.add("active");
-      var panel = document.querySelector('.skill-panel[data-panel="' + tab.getAttribute("data-tab") + '"]');
-      if (panel) panel.classList.add("active");
     });
   });
 
