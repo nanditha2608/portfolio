@@ -159,18 +159,6 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  /* ---------- Expandable stat cards ---------- */
-  document.querySelectorAll(".stat-expandable").forEach(function (card) {
-    function toggle() {
-      var open = card.classList.toggle("open");
-      card.setAttribute("aria-expanded", open ? "true" : "false");
-    }
-    card.addEventListener("click", toggle);
-    card.addEventListener("keydown", function (e) {
-      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); }
-    });
-  });
-
   /* ---------- Footer year ---------- */
   document.getElementById("year").textContent = new Date().getFullYear();
 })();
